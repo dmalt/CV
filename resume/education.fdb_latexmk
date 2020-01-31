@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1540213975 "education.tex" "education.pdf" "education" 1540213975
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1536122179 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1536139076 7908118 c2057adb47bc7a6d5d1d708849ae4691 ""
+  "education.aux" 0 -1 0 ""
+  "education.tex" 1540213975 370 36e91d34068bfaafc1bb991c76fd402e ""
+  (generated)
+  "education.pdf"
+  "education.log"
