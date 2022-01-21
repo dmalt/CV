@@ -90,7 +90,7 @@
   pdfauthor={},
   pdfsubject={},
   pdfkeywords={},
-  colorlinks=false,
+  colorlinks=true,
   allbordercolors=white
 }
 
@@ -131,7 +131,8 @@
 \definecolor{gray}{HTML}{5D5D5D}
 \definecolor{lightgray}{HTML}{999999}
 % Basic colors
-\definecolor{green}{HTML}{C2E15F}
+% \definecolor{green}{HTML}{C2E15F}
+\definecolor{green}{HTML}{4E6603}
 \definecolor{orange}{HTML}{FDA333}
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
@@ -234,6 +235,7 @@
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrysmalltitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
@@ -305,6 +307,10 @@
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\def\@github{#1}}
 
+% Defines writer's Scopus (optional)
+% Usage: \github{<github-nick>}
+\newcommand*{\scopus}[1]{\def\@scopusid{#1}}
+
 % Defines writer's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
@@ -314,6 +320,7 @@
 %   e.g.https://stackoverflow.com/users/123456/sam-smith
 %       would be \stackoverflow{123456}{sam-smith}
 \newcommand*{\stackoverflow}[2]{\def\@stackoverflowid{#1}\def\@stackoverflowname{#2}}
+
 
 % Defines writer's skype (optional)
 % Usage: \skype{<skype account>}
@@ -407,38 +414,32 @@
     \headersocialstyle{
       \newbool{isstart}
       \setbool{isstart}{true}
-      \ifthenelse{\isundefined{\@mobile}}
-        {}
-        {
-          \faMobile\ \@mobile
-          \setbool{isstart}{false}
-        }
-      \ifthenelse{\isundefined{\@email}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false} 
-            }
-            {\@headersocialsep}
-          \href{mailto:\@email}{\faEnvelope\ \@email}
-        }
       \ifthenelse{\isundefined{\@homepage}}
         {}
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \href{http://\@homepage}{\faHome\ \@homepage}
+        }
+      \ifthenelse{\isundefined{\@scopusid}}
+        {}
+        {
+          \ifbool{isstart}
+            {
+              \setbool{isstart}{false} 
+            }
+            {\@headersocialsep}
+          \href{https://www.scopus.com/authid/detail.uri?authorId=\@scopusid}{Scopus \@scopusid}
         }
       \ifthenelse{\isundefined{\@github}}
         {}
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \href{https://github.com/\@github}{\faGithubSquare\ \@github}
@@ -448,7 +449,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}
@@ -458,7 +459,7 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
@@ -468,17 +469,34 @@
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}
+        }
+      \ifthenelse{\isundefined{\@email}}
+        {}
+        {
+          \ifbool{isstart}
+            {
+              \setbool{isstart}{false} 
+            }
+            {\@headersocialsep}
+          \href{mailto:\@email}{\faEnvelope\ \@email}
+        }
+      \ifthenelse{\isundefined{\@mobile}}
+        {}
+        {
+          {\@headersocialsep}
+          \faMobile\ \@mobile
+          \setbool{isstart}{false}
         }
       \ifthenelse{\isundefined{\@skype}}
         {}
         {
           \ifbool{isstart}
             {
-              \setbool{istart}{false} 
+              \setbool{isstart}{false} 
             }
             {\@headersocialsep}
           \faSkype\ \@skype
@@ -542,6 +560,19 @@
   \end{tabular*}
 }
 
+\newcommand*{\cvconf}[4]{
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
+    \ifempty{#2#3}
+      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+      {\entrysmalltitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+      % \multicolumn{2}{L{17cm}}{} \\
+  \end{tabular*}
+}
+
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{
   \begin{center}
@@ -571,17 +602,36 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{13.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{0.1cm} L{13.7cm} R{2.8cm}}
 }{
     \end{tabular*}
   \end{center}
 }
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+% \newcommand*{\cvhonor}[4]{
+%     \honortitlestyle{#1} \honortitlestyle{#2} & {\honorlocationstyle{#3}\linebreak \entrydatestyle{#4}}
+%   \\
+% }
+\def\imagetop#1{\vtop{#1\null}}
 \newcommand*{\cvhonor}[4]{
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}
+    % \begin{cvitems}
+    % \item{
+    \bullet\linebreak\null & #1 #2 & {\honorlocationstyle{#3}\linebreak \entrydatestyle{#4}}
   \\
+        % }
+    % \end{cvitems}
 }
+% \newcommand*{\cvhonor}[4]{
+%   \setlength\tabcolsep{0pt}
+%   \setlength{\extrarowheight}{0pt}
+%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
+%     \ifempty{#2#3}
+%       {\descriptionstyle{#1} & \entrydatestyle{#4} \\}
+%       {\descriptionstyle{#1} & \entrylocationstyle{#3} \\
+%       \descriptionstyle{#2} & \entrydatestyle{#4} \\}
+%   \end{tabular*}
+% }
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{
@@ -599,7 +649,7 @@
 	\skilltypestyle{#1} & \skillsetstyle{#2} 
   \\
 }
-
+% \SetLabelAlign{center}{\hss#1\hss}
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{
   \vspace{-4mm}
