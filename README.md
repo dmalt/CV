@@ -3,9 +3,8 @@
 This CV is customized from [**Awesome CV**](https://github.com/posquit0/Awesome-CV)
 
 
-## Preview
-You can see [PDF](https://github.com/dmalt/CV/raw/master/resume.pdf)
-
+## Download
+Get [PDF](https://github.com/dmalt/CV/raw/master/resume.pdf)
 
 ## How to Use
 ### Requirements
