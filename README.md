@@ -4,7 +4,7 @@ This CV is customized from [**Awesome CV**](https://github.com/posquit0/Awesome-
 
 
 ## Download
-Get [PDF](https://github.com/dmalt/CV/raw/master/resume.pdf)
+Get [PDF](https://github.com/dmalt/CV/blob/master/resume.pdf)
 
 ## How to Use
 ### Requirements
