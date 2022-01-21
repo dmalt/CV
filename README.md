@@ -1,11 +1,10 @@
-# Awesome CV [![Example](https://img.shields.io/badge/example-pdf-green.svg)](https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/resume.pdf)
-
+# CV
 
 This CV is customized from [**Awesome CV**](https://github.com/posquit0/Awesome-CV)
 
 
 ## Preview
-You can see [PDF](https://raw.githubusercontent.com/dmalt/CV/master/resume.pdf)
+You can see [PDF](https://github.com/dmalt/CV/raw/master/resume.pdf)
 
 
 ## How to Use
