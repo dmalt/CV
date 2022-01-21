@@ -6,4 +6,4 @@
 *.out
 *.synctex.gz
 *.xdv
-resume.bbl
+*.bbl
