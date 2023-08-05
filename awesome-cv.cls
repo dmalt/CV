@@ -183,6 +183,7 @@
   BoldItalicFont=*-BoldItalic,
 ]{Roboto}
 
+
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
   UprightFont=*-Thin,
@@ -190,6 +191,7 @@
   BoldFont=*-Medium,
   BoldItalicFont=*-MediumItalic,
 ]{Roboto}
+
 
 % Set font for footer (default is Source Sans Pro)
 \newfontfamily\footerfont[
@@ -217,6 +219,17 @@
 ]{SourceSansPro}
 
 
+% \renewcommand{\headerfont}{\usefont{T1}{phv}{b}{n}}
+% \renewcommand{\headerfontlight}{\usefont{T1}{phv}{m}{n}}
+
+% % Set font for footer (default is Source Sans Pro)
+% \renewcommand{\footerfont}{\usefont{T1}{ppl}{b}{n}}
+
+% % Set font for body (default is Source Sans Pro)
+% \renewcommand{\bodyfont}{\usefont{T1}{ppl}{b}{n}}
+
+% % Set font for light body (default is Source Sans Pro Light)
+% \renewcommand{\bodyfontlight}{\usefont{T1}{ppl}{m}{n}}
 %-------------------------------------------------------------------------------
 %                Configuration for styles
 %-------------------------------------------------------------------------------
