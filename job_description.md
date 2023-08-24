@@ -30,12 +30,13 @@ In this role, you will:
 - Develop plugins for IntelliJ-based IDEs and other JetBrains products.
 
 We’ll be happy to have you on our team if you have:
-Experience with Python.
-Experience with Java, Kotlin, or another object-oriented programming language.
-The ability to write clean code that is easy to read and maintain.
-Knowledge of mathematical statistics and machine learning algorithms.
-Experience implementing end-to-end machine learning pipelines.
-Experience with large-scale data processing.
+
+- Experience with Python.
+- Experience with Java, Kotlin, or another object-oriented programming language.
+- The ability to write clean code that is easy to read and maintain.
+- Knowledge of mathematical statistics and machine learning algorithms.
+- Experience implementing end-to-end machine learning pipelines.
+- Experience with large-scale data processing.
 We don’t expect you to fit all of these criteria, but we are looking for
 someone who has the expertise to strongly perform and consult colleagues in
 some of these areas.

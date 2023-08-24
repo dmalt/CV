@@ -90,8 +90,11 @@
   pdfauthor={},
   pdfsubject={},
   pdfkeywords={},
-  % colorlinks=true,
-  allbordercolors=white
+  colorlinks=true,
+  % allbordercolors=white,
+  linkbordercolor=green,% hyperlink borders will be red
+  linkcolor=red,
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
 }
 
 
