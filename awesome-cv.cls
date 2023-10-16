@@ -325,6 +325,7 @@
 % Defines writer's Scopus (optional)
 % Usage: \github{<github-nick>}
 \newcommand*{\scopus}[1]{\def\@scopusid{#1}}
+\newcommand*{\publications}[1]{\def\@scopusid{#1}}
 
 % Defines writer's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
@@ -447,7 +448,7 @@
               \setbool{isstart}{false} 
             }
             {\@headersocialsep}
-          \href{https://www.scopus.com/authid/detail.uri?authorId=\@scopusid}{Scopus \@scopusid}
+          \href{https://www.scopus.com/authid/detail.uri?authorId=\@scopusid}{publications (Scopus)}
         }
       \ifthenelse{\isundefined{\@github}}
         {}
