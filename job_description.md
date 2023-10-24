@@ -69,13 +69,17 @@ Git
 CI/CD
 Testing / Profiling
 Observability
-Experience interfacing with other frameworks and languages to improve code performance, for instance JIT compilers, cython, etc
+Experience interfacing with other frameworks and languages to improve code
+performance, for instance JIT compilers, cython, etc
 Experience with cloud infrastructure tools such as SQS, Kafka, S3, etc
 
 Let us take care of you.
 
-We embrace state-of-the-art technologies. We firmly believe in the potential of AI as the future of work. You will see us using Copilot and ChatGPT in our daily work. 
-Competitive Compensation: We believe that hard work, skills and ambition should be fairly compensated. 
+We embrace state-of-the-art technologies. We firmly believe in the potential of
+AI as the future of work. You will see us using Copilot and ChatGPT in our
+daily work. 
+Competitive Compensation: We believe that hard work, skills and ambition should
+be fairly compensated. 
 Flexibility: 30 remote days per year. Need a change of scene? Take your laptop, pack a bag and work from the woods, your parents' place or the beach. 
 The best tools and stylish kit: Laptop. Check. Collaboration tools. Check. Killer accessories. Check, check and check again!
 Awesome Office: Based in a beautiful office in the centre, working here means delicious lunches in the garden, Friday beers at our local bar, and access to our own CF library. 
