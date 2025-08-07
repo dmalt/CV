@@ -22,7 +22,7 @@
 
 %%% Override a directory location for fonts(default: 'fonts/')
 \fontdir[fonts/]
-
+\raggedbottom
 %%% Configure a directory location for sections
 \newcommand*{\sectiondir}{resume/}
 
@@ -83,6 +83,7 @@
   {Dmitrii Altukhov~~~·~~~Curriculum Vitae}
   {\thepage}
 
+% \raggedbottom
 \begin{document}
 %%% Make a header for CV with personal data
 \bibliographystyle{plainnat}
@@ -94,10 +95,10 @@
 %%% Import contents
 \import{\sectiondir}{profile.tex}
 \import{\sectiondir}{experience.tex}
+\vspace{-5pt}
 \import{\sectiondir}{education.tex}
 % \import{\sectiondir}{honors.tex}
 % \import{\sectiondir}{conference_contributions.tex}
 % \import{\sectiondir}{publications.tex}
 % \import{\sectiondir}{committees.tex}
-
 \end{document}
