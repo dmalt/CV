@@ -37,10 +37,16 @@ Standing accuracy list. These are not style preferences — each one is a claim
 that is false or unverified, and each has already reached a live document once.
 
 - **"Developed and deployed to production an inference pipeline for content
-  matching."** Deleted from this file 2026-11-09. A June-10 mutation of the real
-  line, "inference pipeline using *rule-based* matching". It sat on a sent CV
-  for weeks. It reads as a perfect hit for inference-platform roles, which is
-  exactly why it kept getting picked. Do not reintroduce it.
+  matching"** (listed under Creative Fabrica below). A June-10 mutation of the
+  real line, "inference pipeline using *rule-based* matching". It sat on a sent
+  CV for weeks. It reads as a perfect hit for inference-platform roles, which
+  is exactly why it keeps getting picked. Do not use it.
+- **"Co-developed ... Visbrain."** It was a single PR. He is a co-author on
+  the Visbrain software paper, which is the honest record of the involvement,
+  but "co-developed" overstates the code contribution. It was on the CV
+  originally because the Montreal entry had nothing else on it; the real work
+  there was the ASD vs. controls classification pipeline, which is both true
+  and quantified. Use that instead.
 - **"experimental design"** as a skill. Familiar with the theory, never
   designed a study. Drafted into a skills line 2026-08-25 and removed.
 - **A speed figure for the SQS → RQ rewrite.** It was "visibly faster" and was
@@ -59,6 +65,7 @@ that is false or unverified, and each has already reached a live document once.
 
 - Own the generative AI Python codebase, infrastructure, and internal testing and QA tool.
 - Developed an AI agent for canvas manipulation and built an evaluation pipeline to benchmark against the baseline agent.
+- Developed and deployed to production an inference pipeline for content matching.
 - Designed and maintained distributed event-driven architecture using Kafka, Redis queues, and Kubernetes.
 - Redesigned the architecture for image generation backend on AWS, significantly improving scalability and system performance.
 - Developed advanced algorithm for color quantization that became foundational for industry-leading image vectorization pipeline.
@@ -170,7 +177,7 @@ participated in on-call rotation after joining that team.
 
 **Title:** Visiting researcher, temporary position
 
-- Co-developed an open-source Python package for GPU-accelerated brain data visualization Visbrain.
+- Contributed to Visbrain, an open-source Python package for GPU-accelerated brain data visualization (one PR; co-author on the software paper, Combrisson et al.).
 - Built a classifier for ASD patients vs. Controls with 75% accuracy using classical ML and information geometry in Python.
 - Co-developed an open-source Python package for heavy neuroimaging data processing, Neuropycon.
 - Preprocessed MEG dataset of 90 subjects for classification using Python scripts.
