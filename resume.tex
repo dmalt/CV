@@ -32,7 +32,8 @@
 %% Color for highlight
 % Define your custom color if you don't like awesome colors
 % \colorlet{awesome}{awesome-red}
-\colorlet{awesome}{awesome-darknight}
+%%% ACCENT -- name in the header and section headings. Unchanged.
+\colorlet{awesome}{awesome-darknight}     % #131A28, charcoal navy
 % \definecolor{awesome}{HTML}{4287f5}
 % \definecolor{awesome}{HTML}{CA63A8}
 %% Colors for text
@@ -40,6 +41,28 @@
 %\definecolor{text}{HTML}{414141}
 %\definecolor{graytext}{HTML}{414141}
 %\definecolor{lighttext}{HTML}{414141}
+
+%%% LINKS -- a separate concern from the accent above; keep them decoupled.
+%%% The class hard-codes linkcolor=red, where its own "red" is #FB4485, hot
+%%% pink. That is what every \href on the page was rendering in. Replaced
+%%% here. Must come after \documentclass, which is what loads hyperref.
+\definecolor{linkcolour}{HTML}{245A5F}    % slate teal, deepened from his #316E73
+% Alternatives: links are small inline text, so they need SATURATION to
+% separate from the #414141 body text, not darkness. #2D6A4F was rejected for
+% being only ~58% saturated at the same lightness, which reads muddy.
+% \definecolor{linkcolour}{HTML}{316E73}  % same hue, lighter/softer
+% \definecolor{linkcolour}{HTML}{7C2D12}  % deep rust
+% \definecolor{linkcolour}{HTML}{9A3412}  % lighter rust / burnt orange
+% \definecolor{linkcolour}{HTML}{046A38}  % Dartmouth green
+% \definecolor{linkcolour}{HTML}{00754A}  % brighter emerald
+% \definecolor{linkcolour}{HTML}{0F766E}  % deep teal
+% \definecolor{linkcolour}{HTML}{155E75}  % deep cyan-blue
+\hypersetup{
+  linkcolor=linkcolour,
+  urlcolor=linkcolour,
+  citecolor=linkcolour,
+  linkbordercolor=linkcolour,
+}
 
 %%% Override a separator for social informations in header(default: ' | ')
 %\headersocialsep[\quad\textbar\quad]
@@ -71,7 +94,7 @@
 % \scopus{56733063800}
 % \linkedin{posquit0}
 %%% Optionals
-\position{ Senior Python AI Engineer {\enskip\cdotp\enskip} PhD (Computer Science) }
+\position{ Senior ML Engineer {\enskip\cdotp\enskip} PhD (Computer Science) }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,6 +124,8 @@
 % \vspace{-10pt}
 % \import{\sectiondir}{honors.tex}
 % \import{\sectiondir}{conference_contributions.tex}
+% Enabling publications also restores the bibliography, which the
+% \cite{Combrisson} in experience.tex depends on -- turn both on together.
 % \import{\sectiondir}{publications.tex}
 % \import{\sectiondir}{committees.tex}
 \end{document}

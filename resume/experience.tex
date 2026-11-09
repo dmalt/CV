@@ -3,31 +3,18 @@
 \begin{cventries}
   \cventry
     {ML Engineer $\rightarrow$ Senior ML Engineer}
-    % {Python Engineer $\rightarrow$ ML Engineer $\rightarrow$ Senior ML Engineer}
     {Creative Fabrica}
     {Amsterdam, the Netherlands}
-    {Dec. 2023 -- present}
+    {Dec. 2023 -- Jun. 2026}
     {
       \begin{cvitems}
-      \item Developed an advanced color-quantization algorithm that became foundational for an industry-leading image vectorization pipeline.
-      \item Own the generative AI \textbf{Python} codebase, infrastructure, and internal testing and QA tool.
-      \item Redesigned the architecture for image generation backend on \textbf{AWS}, significantly improving scalability and system performance.
-      \item Designed and maintained distributed event-driven architecture using \textbf{Kafka}, \textbf{Redis} queues, and \textbf{Kubernetes}.
-      \item Developed and deployed to production an inference pipeline for content matching.
-      % \item Developed an AI agent for canvas manipulation and built an evaluation pipeline to benchmark it against the baseline agent.
-      % \item Designed and implemented an automated code-quality system for the team's monorepo.
+      \item Owned the generative-AI serving stack end to end: \textbf{Kafka} ingress, \textbf{Redis} job queues, CPU pipeline workers, \textbf{Triton Inference Server} on GPU nodes, \textbf{Kubernetes} deployment, \textbf{Grafana} dashboards, metrics and alerting.
+      \item Improved maintainability and observability by replacing in-house job-queue machinery with open-source \textbf{Redis}-backed queues.
+      \item Redesigned a flaky service interface to \textbf{Triton}, moving it off base64 bytestring payloads onto the native protobuf transport.
+      \item Shared on-call and contributed to the company's \textbf{Go} website backend.
+      \item Productionized data scientists' model code; introduced type annotations and unit testing across the team's codebase.
       \end{cvitems}
     }
-  % \cventry
-  %   {Data Scientist (contract)}
-  %   {SBDA Group}
-  %   {Remote}
-  %   {Sep. 2023 -- Oct 2023}
-  %   {
-  %     \begin{cvitems}
-  %     \item Designed and implemented an algorithmic solution in Python for optimizing a manufacturing supply chain process.
-  %     \end{cvitems}
-  %   }
   \cventry
     {Research fellow}
     {Artificial Intelligence Research Institute (AIRI)}
@@ -35,9 +22,7 @@
     {Feb. 2022 -- Apr. 2023}
     {
       \begin{cvitems}
-      \item Built and trained a deep learning model to predict speech from brain data in \textbf{PyTorch}.
-      \item Developed real-time \textbf{Python} pipeline for EEG timeseries prediction using Kalman filtering.
-      % \item Developed a \textbf{Python} library for type-safe timeseries array manipulation.
+      \item Developed a real-time \textbf{Python} pipeline for EEG timeseries prediction using Kalman filtering.
       \end{cvitems}
     }
   \cventry
@@ -48,8 +33,8 @@
     {
       \begin{cvitems}
       \item{Sped up by a factor of 10 the beamformer inverse solver in \href{https://github.com/mne-tools/mne-python}{MNE-python} by modifying the algorithm for vectorized computations.}
-      \item Accelerated various parts of my PhD codebase to enable Monte-Carlo statistics, using \textbf{CUDA} (cuBLAS) and \textbf{C}.
-      \item{Led 4-people group on a project for real-time ML feature extraction and GPU-accelerated 3D visualization of brain activity in \textbf{Python}.}
+      \item Profiled and accelerated various parts of my PhD codebase to enable Monte-Carlo statistics, using \textbf{CUDA} (cuBLAS) and \textbf{C}.
+      \item Administered a laboratory \textbf{GPU} cluster running Linux.
       \end{cvitems}
     }
   \cventry
@@ -59,7 +44,7 @@
     {Oct. -- Dec. 2015, May 2016 -- Dec. 2016}
     {
       \begin{cvitems}
-          \item{Co-developed an open-source \textbf{Python} package for GPU-accelerated brain data visualization \href{https://github.com/EtienneCmb/visbrain}{Visbrain}, \cite{Combrisson}.}
+      \item{Co-developed an open-source \textbf{Python} package for GPU-accelerated brain data visualization, \href{https://github.com/EtienneCmb/visbrain}{Visbrain}.}
       \end{cvitems}
     }
   \cventry
@@ -69,7 +54,7 @@
     {Jun. 2011 -- Jan. 2015}
     {
       \begin{cvitems}
-      \item Developed a droplet evaporation model in \textbf{C++}; tested \textbf{CUDA}-accelerated cluster software for simulations of flow in jet engines.
+      \item Developed a droplet evaporation model in \textbf{C++}; tested \textbf{CUDA}-accelerated cluster software for jet-engine flow simulations.
       \end{cvitems}
     }
 \end{cventries}
