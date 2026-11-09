@@ -41,6 +41,18 @@
 %\definecolor{graytext}{HTML}{414141}
 %\definecolor{lighttext}{HTML}{414141}
 
+%%% LINKS -- a separate concern from the accent above; keep them decoupled.
+%%% The class hard-codes linkcolor=red, and its own "red" is #FB4485, hot
+%%% pink -- that is what every \href renders in by default. Must come after
+%%% \documentclass, which is what loads hyperref.
+\definecolor{linkcolour}{HTML}{245A5F}    % slate teal
+\hypersetup{
+  linkcolor=linkcolour,
+  urlcolor=linkcolour,
+  citecolor=linkcolour,
+  linkbordercolor=linkcolour,
+}
+
 %%% Override a separator for social informations in header(default: ' | ')
 %\headersocialsep[\quad\textbar\quad]
 
